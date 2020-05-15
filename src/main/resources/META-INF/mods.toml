@@ -1,0 +1,11 @@
+modLoader="javafml"
+loaderVersion="[28,)"
+issueTrackerURL="https://github.com/Kamefrede/chat_accessibility"
+
+[[mods]]
+modId="chataccessibility"
+displayName="Chat Accessibility"
+version="${version}"
+authors="Kamefrede"
+description='''
+'''
