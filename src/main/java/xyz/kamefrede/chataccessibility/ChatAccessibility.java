@@ -1,18 +1,15 @@
 package xyz.kamefrede.chataccessibility;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.fabricmc.api.ModInitializer;
+import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.client.options.Option;
 
 import java.util.Arrays;
 import xyz.kamefrede.chataccessibility.mixin.ChatOptionsAccess;
 
-public class ChatAccessibility implements ModInitializer {
+public class ChatAccessibility implements ClientModInitializer {
 
-	@Environment(EnvType.CLIENT)
 	@Override
-	public void onInitialize() {
+	public void onInitializeClient() {
 		Option[] oldOptions = ChatOptionsAccess.getOPTIONS();
 		int optionCount = oldOptions.length;
 		Option[] newOptions = Arrays.copyOf(oldOptions, optionCount + 2);

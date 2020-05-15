@@ -3,7 +3,6 @@ package xyz.kamefrede.chataccessibility.mixin;
 import net.minecraft.client.gui.hud.PlayerListHud;
 import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

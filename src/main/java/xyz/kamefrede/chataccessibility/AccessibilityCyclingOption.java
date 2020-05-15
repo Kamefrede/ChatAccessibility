@@ -1,20 +1,15 @@
 package xyz.kamefrede.chataccessibility;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.widget.AbstractButtonWidget;
 import net.minecraft.client.gui.widget.OptionButtonWidget;
 import net.minecraft.client.options.GameOptions;
 import net.minecraft.client.options.Option;
 import net.minecraft.util.Formatting;
 
-import java.text.Format;
 import java.util.Locale;
-import java.util.function.Function;
 import java.util.function.Supplier;
 import xyz.kamefrede.chataccessibility.config.ConfigHandler;
 
-@Environment(EnvType.CLIENT)
 public class AccessibilityCyclingOption extends Option {
 	public static final AccessibilityCyclingOption CHAT_COLOR_OPTION = new AccessibilityCyclingOption("chataccessibility.options.chat_color", () ->  ConfigHandler.getInstance().cycleChatColor(), () -> ConfigHandler.getInstance().getChatColor());
 	public static final AccessibilityCyclingOption NAME_COLOR_OPTION = new AccessibilityCyclingOption("chataccessibility.options.name_color", () -> ConfigHandler.getInstance().cycleNameColor(), () -> ConfigHandler.getInstance().getPlayerNameColor());
