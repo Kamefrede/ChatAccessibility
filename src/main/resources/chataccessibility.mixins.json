@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "xyz.kamefrede.chataccessibility.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+
+  ],
+  "client": [
+    "ChatOptionsAccess",
+    "MixinChatHud",
+    "MixinPlayerListHud"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

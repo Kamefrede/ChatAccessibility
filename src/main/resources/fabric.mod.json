@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "chataccessibility",
+  "version": "${version}",
+
+  "name": "Chat Accessibility",
+  "description": "Adds some accessibility related settings to the chat settings menu!",
+  "authors": [
+    "Kamefrede"
+  ],
+  "contact": {
+    "homepage": "https://kamefrede.xyz/",
+    "sources": "https://github.com/Kamefrede/ChatAccessibility"
+  },
+
+  "license": "GPLv3",
+  "icon": "assets/chataccessibility/chataccessibility.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "xyz.kamefrede.chataccessibility.ChatAccessibility"
+    ]
+  },
+  "mixins": [
+    "chataccessibility.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.15.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
