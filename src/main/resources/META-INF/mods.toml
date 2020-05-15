@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[28,)"
-issueTrackerURL="https://github.com/Kamefrede/chat_accessibility"
+issueTrackerURL="https://github.com/Kamefrede/ChatAccessibility"
 
 [[mods]]
 modId="chataccessibility"
@@ -8,4 +8,5 @@ displayName="Chat Accessibility"
 version="${version}"
 authors="Kamefrede"
 description='''
+Adds some accessibility related settings to the chat settings menu!
 '''
