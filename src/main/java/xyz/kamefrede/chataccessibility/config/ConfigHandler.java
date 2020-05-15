@@ -41,8 +41,8 @@ public class ConfigHandler {
 		return INSTANCE;
 	}
 
-	private Formatting playerNameColor  = Formatting.BLUE;
-	private Formatting chatColor = Formatting.WHITE;
+	private String playerNameColor  = Formatting.BLUE.getName();
+	private String chatColor = Formatting.WHITE.getName();
 
 	public void cycleNameColor(){
 		playerNameColor = cycleTextFormatting(playerNameColor);
@@ -55,18 +55,19 @@ public class ConfigHandler {
 	}
 
 	public Formatting getChatColor() {
-		return chatColor;
+		return Formatting.byName(chatColor) == null ? Formatting.BLUE : Formatting.byName(chatColor);
 	}
 
 	public Formatting getPlayerNameColor() {
-		return playerNameColor;
+		return Formatting.byName(playerNameColor) == null ? Formatting.BLUE : Formatting.byName(playerNameColor);
 	}
 
-	private Formatting cycleTextFormatting(Formatting formatting){
+	private String cycleTextFormatting(String formattingName){
+		Formatting formatting = Formatting.byName(formattingName) == null ? Formatting.BLUE : Formatting.byName(formattingName);
 		if(formatting.ordinal() + 1 == Formatting.values().length){
-			return Formatting.values()[0];
+			return Formatting.values()[0].getName();
 		}
-		return Formatting.values()[formatting.ordinal() + 1];
+		return Formatting.values()[formatting.ordinal() + 1].getName();
 	}
 
 	public void save(){
